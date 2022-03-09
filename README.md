@@ -1,6 +1,7 @@
 # 29-Concurrency
-Concurrency and Threads. Threads and Runnable. Synchronization and Lock
-The roject have 7 packages  
+Concurrency and Threads. Threads and Runnable. Synchronization and Lock  
+
+### The project have 7 packages  
 
 **_1_create_tread**:   
   -  create 4 threads: one class that extend Thread, one class that implement Runnable, and two nested classe.  
