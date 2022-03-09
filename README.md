@@ -2,9 +2,12 @@
 Concurrency and Threads. Threads and Runnable. Synchronization and Lock
 The roject have 7 packages  
 
-**_1_create_tread**: &emsp; &emsp; create 4 threads: one class that extend Thread, one class that implement Runnable, and two nested classe.  
-**_2_sleep_join_interrupt**: &emsp;&emsp; create 2 threads and work with .sleep(), join() and .interrupt()..  
-**_3_variables_and_synchronization_counter**:   &emsp;&emsp; local variable, instance variable, synchronized method, synchronized block.  
+**_1_create_tread**:   
+-  create 4 threads: one class that extend Thread, one class that implement Runnable, and two nested classe.  
+**_2_sleep_join_interrupt**: 
+-  create 2 threads and work with .sleep(), join() and .interrupt()..  
+**_3_variables_and_synchronization_counter**:  
+-  local variable, instance variable, synchronized method, synchronized block.  
 **_4_wait_notify_message**:   
 **_5_producer_consumer_with_synchronization**:   
 **_6_producer_consumer_with_lock**:  
