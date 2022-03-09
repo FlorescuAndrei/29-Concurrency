@@ -19,7 +19,7 @@ Concurrency and Threads. Threads and Runnable. Synchronization and Lock
 
 [BACK TO START PAGE](https://github.com/FlorescuAndrei/Start.git) 
 
-#### Project Description and some theory:  
+### Project Description and some theory:  
 
 Concurrency and Threads  
 
