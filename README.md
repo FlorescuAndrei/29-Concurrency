@@ -12,7 +12,8 @@ Concurrency and Threads. Threads and Runnable. Synchronization and Lock
 **_3_variables_and_synchronization_counter**:  
   -  local variable, instance variable, synchronized method, synchronized block.  
 
-**_4_wait_notify_message**:   
+**_4_wait_notify_message**:    
+   -  Class Message with two synchronized methods read and write. Threads will write(produce) a message and read (consume) that message. .   
 **_5_producer_consumer_with_synchronization**:   
 **_6_producer_consumer_with_lock**:  
 **_7_producer_consumer_tryLock**:    
@@ -123,7 +124,22 @@ These threads run the doCountdown() method and count down from 10 to 1.
       - Case 2.2.2 **block of code synchronization** :only the for loop within the method will be synchronized using countdown object as an intrinsic look.  
       We use countdown object because it is shared by both threads.  
       Best way because less code is synchronized.
-      Result first thread from 10 to one, second thread from 10 to 1, in order.  
+      Result first thread from 10 to one, second thread from 10 to 1, in order.    
+
+### _4_wait_notify_message  
+
+This is a Producer-Consumer with messages example:  
+Two threads  - one produces messages, one consumes messages. 
+To create these two threads we create two classes that implement Runnable Interface. MessageWriter, MessageReader. These threads shared the same object Message.
+Message object has two methods read() and write(). These methods are synchronized and use wait(), and notify() methods to suspend or wake the thread .  
+
+Methods from Object class that can be called only in synchronized code:   
+-  wait()  
+-  notify()  
+-  notifyAll()  
+   
+notify and notifyAll does the same thing. When there are many threads we use notify to notify the next available thread and not notifyAll for fewer resources to be used. We can not notify a specific thread.  
+
 
 
 
