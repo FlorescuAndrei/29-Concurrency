@@ -128,10 +128,10 @@ These threads run the doCountdown() method and count down from 10 to 1.
 
 ### _4_wait_notify_message  
 
-This is a Producer-Consumer with messages example:  
-Two threads  - one produces messages, one consumes messages. 
-To create these two threads we create two classes that implement Runnable Interface. MessageWriter, MessageReader. These threads shared the same object Message.
-Message object has two methods read() and write(). These methods are synchronized and use wait(), and notify() methods to suspend or wake the thread .  
+This is a Producer-Consumer with messages example:    
+Two threads  - one produces messages, one consumes messages.   
+To create these two threads we create two classes that implement Runnable Interface. MessageWriter, MessageReader. These threads shared the same object Message.  
+Message object has two methods read() and write(). These methods are synchronized and use wait(), and notify() methods to suspend or wake the thread.    
 
 Methods from Object class that can be called only in synchronized code:   
 -  wait()  
