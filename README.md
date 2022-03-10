@@ -100,7 +100,7 @@ Race condition, more threads are writing a shared resource.
 We can prevent interference or race condition by synchronizing critical sections of code.
 
 
-Prevent Thread Interference:
+**Prevent Thread Interference:**  
 A.	using Synchronization  
 B.	using Classes that implement java.util.concurrent.locks.lock interface  
 
