@@ -149,9 +149,12 @@ notify and notifyAll does the same thing. When there are many threads we use not
   
  ### _5_producer_consumer_reentrant_lock:
   
-  
-  
 Producer Consumer Example   
+Three implementation:  
+•	with synchronization  
+•	with Reentrant Look  
+•	with Reentrant Look using try finally block  
+
 We have an ArrayList<String> buffer and two threads Producer and Consumer. 
 Producer adds an item to the list, Consumer removes the item.  
 
