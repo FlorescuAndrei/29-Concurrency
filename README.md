@@ -147,7 +147,7 @@ Methods from Object class that can be called only in synchronized code:
 notify and notifyAll does the same thing. When there are many threads we use notify to notify the next available thread and not notifyAll for fewer resources to be used. We can not notify a specific thread.  
   
   
- ###_5_producer_consumer_reentrant_lock:
+ ### _5_producer_consumer_reentrant_lock:
   
   
   
@@ -166,8 +166,7 @@ Drawbacks to use synchronized blocks
 3.	We can’t test if an object intrinsic lock is available. Also, we can’t time out after we waited for the look for a while. When we reach the beginning of a synchronized block, we can either get the lock and continue executing, or block at that line of code until we get the look.
 4.	If multiple threads are waiting to get a lock, it’s not first come first serve, there isn’t a set order.   
   
-  
-Util Concurrent package.  
+    
 **B) Use Classes that inmplement java.util.concurrent.locks.look interface**  
   
   Instead of using synchronization, we can prevent thread interference using classes that implement java.util.concurrentlocks.lock interface.   
