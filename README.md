@@ -17,9 +17,10 @@ Concurrency and Threads. Threads and Runnable. Synchronization and Lock
 **_5_producer_consumer_reentrant_lock**:  
   -  Producer adds an item to an Arraylist<Strings>, Consumer removes the item.  
    Three implementation:   
-     -  with synchronization  	
-     -  with Reentrant Look  
-     -  with Reentrant Look using try finally block
+     -  with synchronization  	  
+     -  with Reentrant Look using try finally block  
+     -  with Reentrant Look using tryLock()
+
 
     
 
@@ -151,9 +152,10 @@ notify and notifyAll does the same thing. When there are many threads we use not
   
 Producer Consumer Example   
 Three implementation:  
-•	with synchronization  
-•	with Reentrant Look  
+•	with synchronization    
 •	with Reentrant Look using try finally block  
+•	with Reentrant Look using tryLock()
+  
 
 We have an ArrayList<String> buffer and two threads Producer and Consumer. 
 Producer adds an item to the list, Consumer removes the item.  
