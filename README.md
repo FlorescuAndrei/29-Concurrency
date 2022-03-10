@@ -130,6 +130,7 @@ These threads run the doCountdown() method and count down from 10 to 1.
 
 This is a Producer-Consumer with messages example:    
 Two threads  - one produce a message, one consume the message.   
+Object class Message.   
 To create these two threads we create two classes that implement Runnable Interface. MessageWriter, MessageReader. These threads shared the same object Message.  
 Message object has two methods read() and write(). These methods are synchronized and use wait(), and notify() methods to suspend or wake the thread.    
 
