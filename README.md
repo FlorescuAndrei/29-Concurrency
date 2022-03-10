@@ -145,6 +145,40 @@ Methods from Object class that can be called only in synchronized code:
 -  notifyAll()  
    
 notify and notifyAll does the same thing. When there are many threads we use notify to notify the next available thread and not notifyAll for fewer resources to be used. We can not notify a specific thread.  
+  
+  
+ ###_5_producer_consumer_reentrant_lock:
+  
+  
+  
+Producer Consumer Example   
+We have an ArrayList<String> buffer and two threads Producer and Consumer. 
+Producer adds an item to the list, Consumer removes the item.  
+
+-  Booth Threads use the same buffer ArrayList so we synchronized on buffer.  
+-  Instead of using synchronization, we can prevent thread interference using classes   that implement java.util.concurrentlocks.lock interface.   
+  We use a Lock Object – an instance of ReentrantLock class  
+  With synchronization look is released automatically but with reentrant lock we must release the look. This can be error-prone so we use a Try Finally block
+
+Drawbacks to use synchronized blocks 
+1.	Threads that are blocked, waiting to execute synchronized code can’t be interrupted. They are stuck waiting for the lock for the object the code is synchronizing on.
+2.	The synchronized block must be within the same method.
+3.	We can’t test if an object intrinsic lock is available. Also, we can’t time out after we waited for the look for a while. When we reach the beginning of a synchronized block, we can either get the lock and continue executing, or block at that line of code until we get the look.
+4.	If multiple threads are waiting to get a lock, it’s not first come first serve, there isn’t a set order.   
+  
+  
+Util Concurrent package.  
+**B) Use Classes that inmplement java.util.concurrent.locks.look interface**  
+  
+  Instead of using synchronization, we can prevent thread interference using classes that implement java.util.concurrentlocks.lock interface.   
+  We use a Lock Object – an instance of ReentrantLock class.  
+  With synchronization look is released automatically but with reentrant lock we must release the look. This can be error-prone so we use a Try Finally block  
+
+Implementation:   
+-  add a variable (parameter) ReentrantLook bufferLock to the class. Add it in the class constructor too. Instead of using a synchronized block to surround the code to be synchronized we use bufferLock.lock before and bufferLock.unlock after  (in addition we use a try finally block)
+
+
+
 
 
 
