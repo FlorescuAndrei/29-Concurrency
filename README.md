@@ -1,7 +1,7 @@
 # 29-Concurrency
 Concurrency and Threads. Threads and Runnable. Synchronization and Lock  
 
-### The project have 7 packages  
+### The project have 5 packages  
 
 **_1_create_tread**:   
   -  create 4 threads: one class that extend Thread, one class that implement Runnable, and two nested classe.  
@@ -13,10 +13,15 @@ Concurrency and Threads. Threads and Runnable. Synchronization and Lock
   -  local variable, instance variable, synchronized method, synchronized block.  
 
 **_4_wait_notify_message**:    
-   -  Class Message with two synchronized methods read and write. Threads will write(produce) a message and read (consume) that message. .   
-**_5_producer_consumer_with_synchronization**:   
-**_6_producer_consumer_with_lock**:  
-**_7_producer_consumer_tryLock**:    
+  -  Class Message with two synchronized methods read and write. Threads will write(produce) a message and read (consume) that message. .   
+**_5_producer_consumer_reentrant_lock**:  
+  -  Producer adds an item to an Arraylist<Strings>, Consumer removes the item.  
+   Three implementation:   
+     -  with synchronization  	
+     -  with Reentrant Look  
+     -  with Reentrant Look using try finally block
+
+    
 
 [BACK TO START PAGE](https://github.com/FlorescuAndrei/Start.git) 
 
