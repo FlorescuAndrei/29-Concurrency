@@ -110,8 +110,9 @@ To synchronize a block of statement we need an **Intrinsic Lock** (also called M
 Primitive types don’t have an intrinsic lock. We can not synchronize on them.  
 
 **Counter example**:  
-We have a class Countdown with a method doCountdown() which has a for loop with a classic int i variable.  
-Two threads use this method and count down from 10 to 1.  
+We have a class Countdown with a method doCountdown() which has a for loop with a classic int i variable.   
+We create a thread CountdownThread and make two instace of it t1 and t2
+These threads run the doCountdown() method and count down from 10 to 1.  
 -  Case 1: we use a **local variable**, this is saved in the thread stack and the threads do not interfere.  
 **No need to synchronize**.  First thread will execute from 10 to 1 and the second thread will execute from 10 to 1 but not in order,  will alternate the output 
 -  Case 2: we use an **instance variable**, this is saved in heap and the threads shared  it, so there is interfering, race condition.
