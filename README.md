@@ -174,12 +174,12 @@ Drawbacks to use synchronized blocks
   With synchronization look is released automatically but with reentrant lock we must release the look. This can be error-prone so we use a Try Finally block  
 
 Implementation:   
--  add a variable (parameter) ReentrantLook bufferLock to the class. Add it in the class constructor too. Instead of using a synchronized block to surround the code to be synchronized we use bufferLock.lock before and bufferLock.unlock after  (in addition we use a try finally block)
-
-
-
-
-
-
+-  add a variable (parameter) ReentrantLook bufferLock to the class. Add it in the class constructor too. Instead of using a synchronized block to surround the code to be synchronized we use bufferLock.lock before and bufferLock.unlock after  (in addition we use a try finally block)   
+  
+  
+More topics…:  
+Thread Pools. Starvation. Locks (Deadlocks, Reentrant Lock, Unlock, Fair locks, Live locks).  
+  
+  
 
 [BACK TO START PAGE](https://github.com/FlorescuAndrei/Start.git) 
