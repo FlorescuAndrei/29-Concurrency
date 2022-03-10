@@ -1,4 +1,4 @@
-package com.andrei._6_producer_consumer_with_lock;
+package com.andrei._5_producer_consumer_reentrant_lock._b_producer_consumer_with_lock_and_try_finaly;
 
 import com.andrei.ThreadColor;
 

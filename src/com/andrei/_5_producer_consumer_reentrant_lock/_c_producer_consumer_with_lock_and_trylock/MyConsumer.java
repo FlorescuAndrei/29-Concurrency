@@ -1,4 +1,4 @@
-package com.andrei._7_producer_consumer_tryLock;
+package com.andrei._5_producer_consumer_reentrant_lock._c_producer_consumer_with_lock_and_trylock;
 
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;

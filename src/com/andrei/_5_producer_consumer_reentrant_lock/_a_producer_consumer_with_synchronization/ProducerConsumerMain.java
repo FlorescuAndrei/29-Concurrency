@@ -1,4 +1,4 @@
-package com.andrei._5_producer_consumer_with_synchronization;
+package com.andrei._5_producer_consumer_reentrant_lock._a_producer_consumer_with_synchronization;
 
 import com.andrei.ThreadColor;
 

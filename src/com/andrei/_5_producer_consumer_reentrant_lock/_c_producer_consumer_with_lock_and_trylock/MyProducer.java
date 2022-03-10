@@ -1,15 +1,19 @@
-package com.andrei._5_producer_consumer_with_synchronization;
+package com.andrei._5_producer_consumer_reentrant_lock._c_producer_consumer_with_lock_and_trylock;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class MyProducer implements Runnable{
     private List<String> buffer;
     private String color;
 
-    public MyProducer(List<String> buffer, String color) {
+    private ReentrantLock bufferLock;
+
+    public MyProducer(List<String> buffer, String color, ReentrantLock bufferLock) {
         this.buffer = buffer;
         this.color = color;
+        this.bufferLock = bufferLock;
     }
 
     public void run() {
@@ -22,8 +26,19 @@ public class MyProducer implements Runnable{
             try {
                 System.out.println(color + "Adding ...." + num);
 
-                synchronized (buffer) {
+                // instead of synchronized we use bufferLock
+
+                //acquire the look
+                bufferLock.lock();
+
+                //we use try finally block to make sure the look will be unlocked
+                try{
                     buffer.add(num);
+                }finally {
+
+                    //release the lock - important. when we use synchronized the lock is release automatically but with Reentrant Look we have to release it.
+                    bufferLock.unlock();
+
                 }
 
                 Thread.sleep(random.nextInt(2000));
@@ -33,8 +48,12 @@ public class MyProducer implements Runnable{
         }
         System.out.println(color + "Adding EOF and exiting");
 
-        synchronized (buffer) {
+        bufferLock.lock();
+        try {
             buffer.add("EOF");
+        }finally {
+            bufferLock.unlock();
         }
+
     }
 }

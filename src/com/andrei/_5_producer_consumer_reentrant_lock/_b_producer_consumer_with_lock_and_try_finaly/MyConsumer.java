@@ -1,32 +1,42 @@
-package com.andrei._5_producer_consumer_with_synchronization;
+package com.andrei._5_producer_consumer_reentrant_lock._b_producer_consumer_with_lock_and_try_finaly;
 
 import java.util.List;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class MyConsumer implements Runnable{
     private List<String> buffer;
     private String color;
 
-    public MyConsumer(List<String> buffer, String color) {
+    private ReentrantLock bufferLock;
+
+    public MyConsumer(List<String> buffer, String color, ReentrantLock bufferLock) {
         this.buffer = buffer;
         this.color = color;
+        this.bufferLock = bufferLock;
     }
 
     public void run() {
         while(true){
 
-            synchronized (buffer) {
+            //instead of synchronized block we use a lock
+            // we surround the code with try finally to make sure the lock will be unlocked
+            bufferLock.lock();
+
+            try {
                 if (buffer.isEmpty()) {
-                    //if is nothing to read we loop again and keep checking
                     continue;
                 }
                 if(buffer.get(0).equals("EOF")){
                     System.out.println(color + "Exiting");
-                    //break out of the loop. Exiting without removing EOF
                     break;
                 } else{
                     System.out.println(color + "Removed " + buffer.remove(0));
                 }
+
+            }finally {
+                bufferLock.unlock();
             }
+
 
 
         }
