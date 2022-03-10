@@ -64,7 +64,13 @@ Most often Threads are used with Runnable because is more flexible.
 
 .sleep()  
 .interrupt() - wake from sleep()  
-.join() – when we join thread1 with thread2, thread 1 will wait for thread2 to terminate and then will continue to execute. If thread1 never terminates, to avoid blocking we add a time for thread2 to start if time is elapsed.  
+.join() – when we join thread1 with thread2, thread 1 will wait for thread2 to terminate and then will continue to execute. If thread1 never terminates, to avoid blocking we add a time for thread2 to start if time is elapsed.   
+
+This are methods from the Thread class.  
+
+Thread.sleep() – is called  inside the tread run() method (or on the Main calss if we want the main default thread to sleep()).  
+threaName.join(), threadName.interupt() are called in the Main class.
+
 
 ### _3_variables_and_synchronization_counter  
 
