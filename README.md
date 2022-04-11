@@ -13,7 +13,8 @@ Concurrency and Threads. Threads and Runnable. Synchronization and Lock
   -  local variable, instance variable, synchronized method, synchronized block.  
 
 **_4_wait_notify_message**:    
-  -  Class Message with two synchronized methods read and write. Threads will write(produce) a message and read (consume) that message. .   
+  -  Class Message with two synchronized methods read and write. Threads will write(produce) a message and read (consume) that message.  
+    
 **_5_producer_consumer_reentrant_lock**:  
   -  Producer adds an item to an Arraylist<Strings>, Consumer removes the item.  
    Three implementation:   
