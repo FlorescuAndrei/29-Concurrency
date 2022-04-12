@@ -104,7 +104,7 @@ We can prevent interference or race condition by synchronizing critical sections
 
 **Prevent Thread Interference:**  
 A.	using Synchronization  
-B.	using Classes that implement java.util.concurrent.locks.lock interface  
+B.	using Classes that implement java.util.concurrent.locks.lock interface (covered down the page in _5_producer_consumer_reentrant_lock package)   
 
 **A. Synchronization** – schedules when the heap is access.  
 When a method is synchronized only one thread can execute it at a time. The other threads will suspend until the thread running the method exit it.  
