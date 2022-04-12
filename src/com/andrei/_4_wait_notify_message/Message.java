@@ -4,7 +4,7 @@ public class Message {
     private String message;
     private boolean empty = true;// no message to read
 
-    //will be read by the consumer to read the message
+    //will be used by the consumer to read the message
     public synchronized String read(){
         while(empty){
             try{
