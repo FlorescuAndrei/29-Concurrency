@@ -4,7 +4,7 @@ Concurrency and Threads. Threads and Runnable. Synchronization and Lock
 ### The project have 5 packages  
 
 **_1_create_tread**:   
-  -  create 4 threads: one class that extend Thread, one class that implement Runnable, and two nested classe.  
+  -  create 4 threads: one class that extends Thread, one class that implements Runnable, and two nested classes.  
 
 **_2_sleep_join_interrupt**: 
   -  create 2 threads and work with .sleep(), join() and .interrupt()..  
