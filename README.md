@@ -76,9 +76,6 @@ Most often Threads are used with Runnable because is more flexible.
 
 sleep(), interrupt() an join() are methods from the Thread class.  
 
-Thread.sleep() – is called  inside the thread run() method (or on the Main calss if we want the main default thread to sleep()).  
-threaName.join(), threadName.interupt() are called in the Main class.
-
 
 ### _3_variables_and_synchronization_counter  
 
